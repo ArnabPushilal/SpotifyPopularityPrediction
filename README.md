@@ -3,7 +3,7 @@
 
 * [Data Collection](https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#data-collection)
 
-* [Data Description + Intial thoughts](https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#Data-Description-+-Initial-thoughts)
+* [Data Description + Intial thoughts](https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#data-description--intial-thoughts)
 
 ## Motivation
 Just in the past year I had released 2 songs on spotify. As far as marketing went I felt it just bounced around my friends and back. As I forayed into Data Science, I realized that Spotify analyzes each track & assigns it a score.  So what my main motive was to see if my song 'lacked' in some elements according to spotify. To do this I wanted to create a model which would predict the popularity score assigned by spotify for an unknown track.
@@ -38,7 +38,69 @@ I intially queried the song's by year ( 2000 was the limit per year ) & maximum 
 Apart from this I added another data point 'Numer of Markets' the song was released in. Country wise list was available from the 'search' end point
 As a musician some of the data points already made sense to me. For instance the 'key' , 'mode' ,'time signature' , ' tempo' are familiar terms. Now some of the abstract and insteresting terms are 'valence' , 'instrumentalness' , 'energy' ,'Danceablity' are kind of vague. It will be interesting to see if these features are contributing to overall popularity. Since we have no way of physically changing the 'valence' as we do for the 'key' of the song.
 
+# EDA
 
+First things first, I can see a direct correlation with Year of Release and Popularity. 
+
+## Mean of Popularity of songs Per year
+|Year | Popularity|
+|--- | --- |
+|1980 |   36.282500
+|1981 |   36.050000
+|1982 |   36.516000
+|1983 |   36.641000
+|1984 |   37.947500
+|1985 |   37.129500
+|1986   | 37.710500
+|1987   | 39.866500
+|1988   | 39.723500
+|1989   | 39.439500
+|1990   | 40.449500
+|1991   | 41.892500
+|1992   | 43.157500
+|1993   | 43.243000
+|199    | 45.090000
+|1995   | 45.145000
+|1996   | 45.215500
+|1997   | 45.966500
+|1998   | 46.183500
+|1999   | 47.651500
+|2000   | 47.050000
+|2001   | 49.357000
+|2002   | 49.138000
+|2003   | 49.178000
+|2004   | 49.823000
+|2005   | 51.173500
+|2006   | 51.560500
+|2007   | 51.470000
+|2008   | 51.361000
+|2009   | 52.145000
+|2010   | 53.650500
+|2011   | 53.901000
+|2012   | 55.263500
+|2013   | 56.435000
+|2014   | 57.706000
+|2015   | 60.568500
+|2016   | 61.924462
+|2017   | 65.418500
+|2018   | 67.610000
+|2019   | 69.853500
+|2020   | 40.581500
+
+Since it would be no use for anyone to compare their song with older ones I decided to split the data into each decade 
+
+80s
+90s
+00s
+10s
+
+It would also be interesting to see the how different are the features for the songs in each decade
+
+## Univariate plots
+
+## Bivariate plots
+
+## Correlation Heat Map Year-wise
 
 
 
