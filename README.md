@@ -1,6 +1,7 @@
-## Table of Contents
+### Table of Contents
 [Motivation](https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#motivation)
-[Data Collection](https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#Data Collection)
+
+[Data Collection](https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#data-collection)
 
 
 # Motivation
