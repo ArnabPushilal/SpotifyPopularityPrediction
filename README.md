@@ -26,7 +26,7 @@ I intially queried the song's by year ( 2000 was the limit per year ) & maximum 
 |3 - duration_ms (int)| Duration of the track in ms|Numerical|
 |4 - energy (float)| Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy.|Numerical|
 |5 - instrumentalness (float) | Predicts whether a track contains no vocals. “Ooh” and “aah” sounds are treated as instrumental in this context. |Numerical|
-|6 - key (int)| The estimated overall key of the track.| Categorical |
+|6 - key (int)| The estimated overall key of the track. 0 represents C. 1 C# and so on.| Categorical |
 |7 - liveness (float)|Detects the presence of an audience in the recording. Higher liveness values represent an increased probability that the track was performed live.|Numerical|
 |8 - loudness| The overall loudness of a track in decibels (dB) |Numerical|
 |9 - mode (int)| Mode indicates the modality (major or minor) of a track, the type of scale from which its melodic content is derived.|Categorical |
@@ -43,61 +43,19 @@ As a musician some of the data points already made sense to me. For instance the
 First things first, I can see a direct correlation with Year of Release and Popularity. 
 
 ## Mean of Popularity of songs Per year
-|Year | Popularity|
-|--- | --- |
-|1980 |   36.282500
-|1981 |   36.050000
-|1982 |   36.516000
-|1983 |   36.641000
-|1984 |   37.947500
-|1985 |   37.129500
-|1986   | 37.710500
-|1987   | 39.866500
-|1988   | 39.723500
-|1989   | 39.439500
-|1990   | 40.449500
-|1991   | 41.892500
-|1992   | 43.157500
-|1993   | 43.243000
-|1994    | 45.090000
-|1995   | 45.145000
-|1996   | 45.215500
-|1997   | 45.966500
-|1998   | 46.183500
-|1999   | 47.651500
-|2000   | 47.050000
-|2001   | 49.357000
-|2002   | 49.138000
-|2003   | 49.178000
-|2004   | 49.823000
-|2005   | 51.173500
-|2006   | 51.560500
-|2007   | 51.470000
-|2008   | 51.361000
-|2009   | 52.145000
-|2010   | 53.650500
-|2011   | 53.901000
-|2012   | 55.263500
-|2013   | 56.435000
-|2014   | 57.706000
-|2015   | 60.568500
-|2016   | 61.924462
-|2017   | 65.418500
-|2018   | 67.610000
-|2019   | 69.853500
-|2020   | 40.581500
 
 ![Year Vs Average PopularityScore](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/Year_vs_AvgPopScore.png)
-Since it would be no use for anyone to compare their song with older ones I decided to split the data into each decade 
 
-80s
-90s
-00s
-10s
+* We can see there is a direct correlation between a song's popularity & the year of release. 
+* Initially I was about to dump all the data into one model, then I thought it would be prudent of me to *make the model decade-wise*. Since all the new test data can't really be from the past. The question can be more like *how would my song do in each decade? 
+* For 2020 there is a drop in average & 605 Null values were there. This goes to suggest that there is probably a mimimum threshold of time that a song needs to be on spotify for the PopularityScore to be calculated. For this purpose I will ignore the songs of 2020.
+* It would also be interesting to see the how different are the features for the songs in each decade & how they correlate with each other
 
-It would also be interesting to see the how different are the features for the songs in each decade
 
 ## Univariate plots
+
+### 2010s
+
 
 ## Bivariate plots
 
