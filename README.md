@@ -61,7 +61,7 @@ First things first, I can see a direct correlation with Year of Release and Popu
 ### 1990s
 ![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/Univariate_90s.png)
 ### 1980s
-<img src="https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/Univariate_80s.png" width="100" height="100">
+<img src="https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/Univariate_80s.png" width="1000" height="400">
 
 ## Bivariate plots
 
