@@ -87,6 +87,7 @@ First things first, I can see a direct correlation with Year of Release and Popu
 |2019   | 69.853500
 |2020   | 40.581500
 
+![Year Vs Average PopularityScore]()
 Since it would be no use for anyone to compare their song with older ones I decided to split the data into each decade 
 
 80s
