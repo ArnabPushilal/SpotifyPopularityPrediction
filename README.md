@@ -60,6 +60,9 @@ First things first, I can see a direct correlation with Year of Release and Popu
 ### 1980s
 <img src="https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/Univariate_80s.png" width="1000" height="400">
 
+* Distributions of 'acousticness', 'speechiness' , 'energy ', 'instrumentalness' seems to be skewed. I will probably have to try the box-cox trasnformation for some of the variables. '
+* In categorical variables 'key' of 4/4 is the most common 
+
 ## Bivariate plots
 
 ## Correlation Heat Map Year-wise
