@@ -114,7 +114,35 @@ First things first, I can see a direct correlation with Year of Release and Popu
 
 * Perhaphs the a non parametric test like Kruskals would have been a better choice.
 
+# Classification
+
+## Logsitic Regression
+
+* I made a param grid consisiing of the different solvers & C values ( inverse of regularization ) and then applied a simple grid search approach to find the best model. 
+* To select the metric I thought the AUC of the ROC would be better since, If I chose a normal accuracy metric you would get a high score even when you predict all 0s since I have explicitly chosen a 1/10 ratio for Popular & Not popular.
+
+* I used class weight = 'balanced' to help with the imblance problem I have.
+
+* LogisticRegression(C=10.154689924330807, class_weight='balanced', dual=False,
+                   fit_intercept=True, intercept_scaling=1, l1_ratio=None,
+                   max_iter=100, multi_class='auto', n_jobs=-1, penalty='l2',
+                   random_state=0, solver='saga', tol=0.0001, verbose=0,
+                   warm_start=False)
+               
+
+![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/ROC_logistic.png)
 
 
+### Confusion Matrix for Logistic Regression
+
+| Class     |  precision   | recall | f1-score |  support|
+| --- | --- | --- | --- | --- |
+|0     |  0.95     | 0.66  |    0.77  |    3613|
+|1      | 0.17  |    0.65   |   0.27    |   387|
 
 
+* So  it looks like my model is getting a lot of false positives for the 'Popular' class. This is expected as using class weight='balanced' you tend to get more false alerts.
+ .
+## Random Forrest Classifier
+
+*
