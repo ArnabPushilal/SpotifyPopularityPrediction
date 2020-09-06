@@ -5,6 +5,18 @@
 
 * [Data Description + Intial thoughts](https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#data-description--intial-thoughts)
 
+* [EDA](https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#eda)
+  * [Mean of Popularity of songs Per year](https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#mean-of-popularity-of-songs-per-year)
+  * [Univariate Plots](https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#univariate-plots)
+  * [Bivariate Plots] (https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#bivariate-plots)
+  * [Correlation Heatmap] (https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#bivariate-plots)
+  * [ANOVA] (https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#bivariate-plots)
+* [Classification] (https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#classification)
+  * [Logistic Regression] (https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#logsitic-regression)
+  * [Random Forrest] (https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#random-forrest-classifier)
+  
+  
+ 
 ## Motivation
 Just in the past year I had released 2 songs on spotify. As far as marketing went I felt it just bounced around my friends and back. As I forayed into Data Science, I realized that Spotify analyzes each track & assigns it a score.  So what my main motive was to see if my song 'lacked' in some elements according to spotify. To do this I wanted to create a model which would predict the popularity score assigned by spotify for an unknown track.
 
@@ -104,7 +116,7 @@ First things first, I can see a direct correlation with Year of Release and Popu
 * Similary 'loudness' & 'danceability' also have increasing correlation along the decades. I guess louder is more danceable in the present
 
 ## One-way ANOVA for Numerical variables[between groups PopQuant==0 & PopQuant ==1  post log transformation ]
-# 1990s
+### 1990s
 |Attribute|danceability|	energy|	loudness|	valence	|liveness|	tempo|	acousticness|	duration_ms|	instrumentalness|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |f	|5.301233e+01	|8.507439e+01	|2.053819e+02	|13.541535|	14.840970|	2.452146|	8.469009e+01|	1.019611|	1.105531e+02|
@@ -123,13 +135,7 @@ First things first, I can see a direct correlation with Year of Release and Popu
 
 * I used class weight = 'balanced' to help with the imblance problem I have.
 
-* LogisticRegression(C=10.154689924330807, class_weight='balanced', dual=False,
-                   fit_intercept=True, intercept_scaling=1, l1_ratio=None,
-                   max_iter=100, multi_class='auto', n_jobs=-1, penalty='l2',
-                   random_state=0, solver='saga', tol=0.0001, verbose=0,
-                   warm_start=False)
-               
-
+### ROC  
 ![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/ROC_logistic.png)
 
 
@@ -147,15 +153,19 @@ First things first, I can see a direct correlation with Year of Release and Popu
 
 ![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/feature_imp_2.png)
 
-* Most important features contributing to 'Popularity - 1' seems to be loudness & danceability.
+* Most important features contributing to 'Popularity - 1' seems to be loudness & danceability. 
  .
 ## Random Forrest Classifier
 
+
 * For Random Forrest I did a random search on the hyperparameters.
 
- ![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/ROC_Random%20(2).png)
+### ROC
+![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/ROC_Random%20(2).png)
  
- * The model turned out to be overfitting on the training data & not as good on the test data.
+* The model turned out to be completely overfitting on the training data & not as good on the test data.
+ 
+ 
  
  
  
