@@ -142,7 +142,23 @@ First things first, I can see a direct correlation with Year of Release and Popu
 
 
 * So  it looks like my model is getting a lot of false positives for the 'Popular' class. This is expected as using class weight='balanced' you tend to get more false alerts.
+
+### Feature Importance with this model
+
+![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/feature_imp_2.png)
+
+* Most important features contributing to 'Popularity - 1' seems to be loudness & danceability.
  .
 ## Random Forrest Classifier
 
-*
+* For Random Forrest I did a random search on the hyperparameters.
+
+ ![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/ROC_Random%20(2).png)
+ 
+ * The model turned out to be overfitting on the training data & not as good on the test data.
+ 
+ 
+ 
+ 
+ 
+
