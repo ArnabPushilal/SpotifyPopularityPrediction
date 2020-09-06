@@ -7,7 +7,8 @@
 
 * [EDA](https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#eda)
   * [Mean of Popularity of songs Per year](https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#mean-of-popularity-of-songs-per-year)
-  * [Univariate Plots](https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#univariate-plots)
+  
+  * [Univariate Plots ](https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#univariate-plots)
   * [Bivariate Plots] (https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#bivariate-plots)
   * [Correlation Heatmap] (https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#bivariate-plots)
   * [ANOVA] (https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#bivariate-plots)
