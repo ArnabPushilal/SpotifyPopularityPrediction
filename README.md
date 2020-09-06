@@ -95,6 +95,25 @@ First things first, I can see a direct correlation with Year of Release and Popu
 
 ![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/HeatMap_10s%20(1).png)
 
+* No single variable has good linear correlation with 'PopQuant' which goes to *show a linear model won't do really well.
+
+* 'Energy & Loudness' are correlated heavily, will probably get rid of one of the variables
+
+* Interestingly 'danceability' & 'PopQuant' has better correlation in the 10s than any other decade
+
+* Similary 'loudness' & 'danceability' also have increasing correlation along the decades. I guess louder is more danceable in the present
+
+## One-way ANOVA for Numerical variables[between groups PopQuant==0 & PopQuant ==1  post log transformation ]
+# 1990s
+|Attribute|danceability|	energy|	loudness|	valence	|liveness|	tempo|	acousticness|	duration_ms|	instrumentalness|
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+|f	|5.301233e+01	|8.507439e+01	|2.053819e+02	|13.541535|	14.840970|	2.452146|	8.469009e+01|	1.019611|	1.105531e+02|
+|pValue|	3.437428e-13|	3.151434e-20|	2.372030e-46|	0.000234	|0.000117|	0.117380|	3.824398e-20|	0.312624|	8.656026e-26|
+
+* So usually a low p value would help us reject our null hypothesis. But I'm suprised that it's so low for danceability,energy,loudness, acousticness,instrumentalness even when the distributions in the pairplot looked very identical. 
+
+* Perhaphs the a non parametric test like Kruskals would have been a better choice.
+
 
 
 
