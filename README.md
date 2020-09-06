@@ -65,8 +65,35 @@ First things first, I can see a direct correlation with Year of Release and Popu
 
 ## Bivariate plots
 
+* I transformed PopularityScore into 'Popular' & 'Not Popular' *by percentile for each decade*. Using qcut , I divided the data into 10 quantines and then took the 10th quantile as Popular & rest as not Popular. I tried out lesser divisions of quantiles (top 25th percentile, top 20th percentile) but that didn't work out well since I felt that the score was not high enough for the top 25th percentile to classify it as popular (it was 44 for the 80s). I didn't go beyond 10 quantiles to make sure *my classes are not too imbalanced.
+* 
+(Plots are Prior to log transformation)
+
+### 1980s pairplot
+![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/80s.png)
+
+* For single variables distributions of 'PopQuant 0 & 1' look very similar. This is not good.
+* Loudness looks like it has a slightly different mean for 0 & 1
+* By virtue of linear separability we can the data can be seaparated by loudness & dancebility / loudness & valence.
+* We can see some variables which are linearly correlated, which I guess would be more clear with correlation heatmap
+
 ## Correlation Heat Map Year-wise
 
+### 1980s
+
+![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/HeatMap_80s%20(1).png)
+
+### 1990s
+
+![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/HeatMap_90s%20(1).png)
+
+### 2000s
+
+![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/HeatMap_00s%20(1).png)
+
+### 2010s
+
+![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/HeatMap_10s%20(1).png)
 
 
 
