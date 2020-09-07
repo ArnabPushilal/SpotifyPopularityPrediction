@@ -200,6 +200,20 @@ First things first, I can see a direct correlation with Year of Release and Popu
 ![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/Actual%20vs%20Fitted%20Values%20for%20Popularity%20_test_rf.png)
 * Although means seems about the same, std-dev has gone up. Extremely high / low predictions may be very error prone.
 
+## Ridge Regression with polynomial features
+
+* Although polynomial trends weren't clear in the EDA, I wanted to try it out.
+* It makes sense to use Ridge Regression to penalize higher coefficients.
+* So I made a grid up of alpha from 0.1 - 1000 & degrees 1,2,3 to see it could trump the random forest model.
+
+|Data |Mean Absolute Error (MAE) | Mean Squared Error (MSE)| Root Mean Squared Error (RMSE) |Mean Absolute Percentage Error| Accuracy|
+| --- | --- | --- | --- | --- | --- |
+|Train |64.66623249851526| 62.309629632070724| 7.893644888900863| 10.53| 89.47|
+|Test | 6.463273484157742 |64.66623249851526| 8.041531725891234| 10.75 |89.25|
+
+* Hah , just like the Classifier it seems Random Forrest just overfits on the train data so easily, while This seems generally the same with both test and train data.
+
+
 
 
 
