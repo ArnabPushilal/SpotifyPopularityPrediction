@@ -160,10 +160,10 @@ First things first, I can see a direct correlation with Year of Release and Popu
 
 * Most important features contributing to 'Popularity - 1' seems to be loudness & danceability. 
  .
-## Random Forrest Classifier
+## Random Forest Classifier
 
 
-* For Random Forrest I did a random search on the hyperparameters.
+* For Random Forest I did a random search on the hyperparameters.
 
 ### ROC
 
@@ -175,10 +175,32 @@ First things first, I can see a direct correlation with Year of Release and Popu
 
 # Regression
 
-## Random Forrest Regressor
+## Random Forest Regressor
 
-* A little bit of hyperparameter tu
- 
+* Similar to classification, a random-search + cv was performed on the RandomForest Regression Model
+
+### Metrics
+
+Data |Mean Absolute Error (MAE) | Mean Squared Error (MSE)| Root Mean Squared Error (RMSE) |Mean Absolute Percentage Error| Accuracy|
+Train |2.3380337756197442| 8.5386173504373 |2.922091263194444| 3.9 | 96.1|
+Test | 6.422792491484789 |63.37485329803256| 7.960832450066548| 10.64 |89.36|
+
+* MAPE is about 10.6% & Absolute Error is 6.4422 for test data. So for a scale of 0-100 , Not bad?
+
+### Output Distribution vs Actual Distribution
+
+### Train Data
+
+![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/Actual%20vs%20Fitted%20Values%20for%20Popularity_train_rf%20(2).png)
+
+* Train data seems to be following the distribution pretty well.
+
+![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/Actual%20vs%20Fitted%20Values%20for%20Popularity%20_test_rf.png)
+
+* Although means seems about the same, std-dev has gone up. Extremely high / low predictions may be very error prone.
+
+
+
  
  
  
