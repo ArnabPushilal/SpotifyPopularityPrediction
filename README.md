@@ -16,8 +16,12 @@
 * [Classification](https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#classification)
 
   * [Logistic Regression](https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#logsitic-regression)
-  * [Random Forrest](https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#random-forrest-classifier)
-* [Regression](
+  * [Random Forest](https://github.com/ArnabPushilal/SpotifyProject/blob/master/README.md#random-forrest-classifier)
+* [Regression](https://github.com/ArnabPushilal/SpotifyProject#regression)
+  * [Random Forest Regressor](https://github.com/ArnabPushilal/SpotifyProject#regression)
+   * [Metrics](https://github.com/ArnabPushilal/SpotifyProject#metrics)
+   * [Output Distribution](https://github.com/ArnabPushilal/SpotifyProject#output-distribution-vs-actual-distribution)
+  *
   
  
 ## Motivation
@@ -181,23 +185,22 @@ First things first, I can see a direct correlation with Year of Release and Popu
 
 ### Metrics
 
-Data |Mean Absolute Error (MAE) | Mean Squared Error (MSE)| Root Mean Squared Error (RMSE) |Mean Absolute Percentage Error| Accuracy|
-Train |2.3380337756197442| 8.5386173504373 |2.922091263194444| 3.9 | 96.1|
-Test | 6.422792491484789 |63.37485329803256| 7.960832450066548| 10.64 |89.36|
+|Data |Mean Absolute Error (MAE) | Mean Squared Error (MSE)| Root Mean Squared Error (RMSE) |Mean Absolute Percentage Error| Accuracy|
+| --- | --- | --- | --- | --- | --- |
+|Train |2.3380337756197442| 8.5386173504373 |2.922091263194444| 3.9 | 96.1|
+|Test | 6.422792491484789 |63.37485329803256| 7.960832450066548| 10.64 |89.36|
 
 * MAPE is about 10.6% & Absolute Error is 6.4422 for test data. So for a scale of 0-100 , Not bad?
 
 ### Output Distribution vs Actual Distribution
-
-### Train Data
-
+### Train Data 
 ![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/Actual%20vs%20Fitted%20Values%20for%20Popularity_train_rf%20(2).png)
-
 * Train data seems to be following the distribution pretty well.
-
+### Test Data
 ![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/Actual%20vs%20Fitted%20Values%20for%20Popularity%20_test_rf.png)
-
 * Although means seems about the same, std-dev has gone up. Extremely high / low predictions may be very error prone.
+
+
 
 
 
