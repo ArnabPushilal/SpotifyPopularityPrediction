@@ -139,6 +139,8 @@ First things first, I can see a direct correlation with Year of Release and Popu
 * I used class weight = 'balanced' to help with the imblance problem I have.
 
 ### ROC  
+* logistic : test ROC AUC=0.704
+* logistic :train ROC AUC=0.713
 ![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/ROC_logistic.png)
 
 
@@ -164,9 +166,18 @@ First things first, I can see a direct correlation with Year of Release and Popu
 * For Random Forrest I did a random search on the hyperparameters.
 
 ### ROC
+
+* Random : test ROC AUC=0.729
+* Random :train ROC AUC=1.000
 ![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/ROC_Random%20(2).png)
  
 * The model turned out to be completely overfitting on the training data & not as good on the test data.
+
+# Regression
+
+## Random Forrest Regressor
+
+* A little bit of hyperparameter tu
  
  
  
