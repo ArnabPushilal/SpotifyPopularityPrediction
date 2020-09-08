@@ -100,7 +100,7 @@ First things first, I can see a direct correlation with Year of Release and Popu
 * We can see some variables which are linearly correlated, which I guess would be more clear with correlation heatmap
 
 ### 2010s pairplot
-![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/pairplot.png)
+![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/PairPlot.png)
 
 * Danceability seems to have a distribution which is different for 0s & 1s
 * Instrumentalness plot has a lot of noise
