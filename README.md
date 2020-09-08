@@ -222,17 +222,20 @@ First things first, I can see a direct correlation with Year of Release and Popu
 |Test | 6.463273484157742 |64.66623249851526| 8.041531725891234| 10.75 |89.25|
 
 
+# My own song
+
+| Track_Name | Valence | Danceability | loudness | duration_ms |instrumentalness | key | liveness |time_signature |energy | track_id | NoOfMarkets
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Far Away |  0.289 | 0.653 | -15.519 |181680 | 0.404|7 |  0.108|4 |0.332 |0y2Ga0Au2NZaRuIGEAiwTQ | 89
+
+* If you go back to the univariate distributions the only thing which I can see improve is 'danceability'. Other factors don't seem to matter as much. That makes sense too , who cares what key or time signature you are in. 
 
 
+# Further Work
 
-
-
+* A lot more things probability go into popularity. We can try and add features from artist's social media- activity, no of followers, likes -etc
+* Feature Engineering could be done to help the model
+* Compare songs with high danceability scores in order to understand what the feature exactly mean
 
 
  
- 
- 
- 
- 
- 
-
