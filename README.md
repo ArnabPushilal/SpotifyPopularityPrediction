@@ -30,7 +30,7 @@ Just in the past year I had released 2 songs on spotify. As far as marketing wen
 ## Data Collection
 I collected the data using the spotipy library built around the spotify API
 
-I intially queried the song's by year ( 2000 was the limit per year ) & maximum items returned per call was 50, but you could offset the index of the first result which;;l. To make the data base large enough I collected samples from 1980 - 2020 ( ~80000 data points).The other function I defined was to collect audio features by spotify for each track based on the track id.
+I intially queried the song's by year  & maximum items returned per call was 50, but you could offset the index of the first result which helps you get more than 50( This allowed a max of 2000 per year) . To make the data base large enough I collected samples from 1980 - 2020 ( ~80000 data points).The other function I defined was to collect audio features by spotify for each track based on the track id.
 
 * https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/ ( end point for audio features )
 * https://spotipy.readthedocs.io/en/2.14.0/ ( spotipy library )
@@ -66,7 +66,7 @@ First things first, I can see a direct correlation with Year of Release and Popu
 ![Year Vs Average PopularityScore](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/Year_vs_AvgPopScore.png)
 
 * We can see there is a direct correlation between a song's popularity & the year of release. 
-* Initially I was about to dump all the data into one model, then I thought it would be prudent of me to *make the model decade-wise*. Since all the new test data can't really be from the past. The question can be more like *how would my song do in each decade? 
+* Initially I was about to dump all the data into one model, then I thought it would be prudent of me to *make the model decade-wise*. Since all the new test data can't really be from the past. 
 * For 2020 there is a drop in average & 605 Null values were there. This goes to suggest that there is probably a mimimum threshold of time that a song needs to be on spotify for the PopularityScore to be calculated. For this purpose I will ignore the songs of 2020.
 * It would also be interesting to see the how different are the features for the songs in each decade & how they correlate with each other
 
@@ -88,7 +88,7 @@ First things first, I can see a direct correlation with Year of Release and Popu
 * 
 (Plots are Prior to log transformation)
 
-### 1980s pairplot
+### 1980s pairplot 
 ![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/80s.png)
 
 * For single variables distributions of 'PopQuant 0 & 1' look very similar. This is not good.
@@ -133,7 +133,7 @@ First things first, I can see a direct correlation with Year of Release and Popu
 
 * Perhaphs the a non parametric test like Kruskals would have been a better choice.
 
-# Classification
+# Classification [ 2010s DataSet ]
 
 ## Logsitic Regression
 
@@ -177,7 +177,7 @@ First things first, I can see a direct correlation with Year of Release and Popu
  
 * The model turned out to be completely overfitting on the training data & not as good on the test data.
 
-# Regression
+# Regression [2010s DataSet]
 
 ## Random Forest Regressor
 
@@ -210,7 +210,7 @@ First things first, I can see a direct correlation with Year of Release and Popu
 * It looks like the model can't distinguish between the features too well, but nevertheless 'danceability' & 'No of Market' has high importance
 * Intrestingly, the controllable musical features like 'key' ,'mode','time signature' is contributing the least! Therefore , I will probably have to dig deeper into how spotify calculates features like 'danceability', 'acousticness'
 
-## Ridge Regression with polynomial features
+## Ridge Regression with polynomial features 
 
 * Although polynomial trends weren't clear in the EDA, I wanted to try it out.
 * It makes sense to use Ridge Regression to penalize higher coefficients.
@@ -236,6 +236,9 @@ First things first, I can see a direct correlation with Year of Release and Popu
 * A lot more things probability go into popularity. We can try and add features from artist's social media- activity, no of followers, likes -etc
 * Feature Engineering could be done to help the model
 * Compare songs with high danceability scores in order to understand what the feature exactly mean
+* Compare each decade and see what features are important in each decade
+
+
 
 
  
