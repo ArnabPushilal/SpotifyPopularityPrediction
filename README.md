@@ -224,9 +224,9 @@ First things first, I can see a direct correlation with Year of Release and Popu
 
 # My own song
 
-| Track_Name | Valence | Danceability | loudness | duration_ms |instrumentalness | key | liveness |time_signature |energy | track_id | NoOfMarkets
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Far Away |  0.289 | 0.653 | -15.519 |181680 | 0.404|7 |  0.108|4 |0.332 |0y2Ga0Au2NZaRuIGEAiwTQ | 89
+| Track_Name | Valence | Danceability | loudness | duration_ms |instrumentalness | key | liveness |time_signature |energy | track_id | NoOfMarkets|
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Far Away |  0.289 | 0.653 | -15.519 |181680 | 0.404|7 |  0.108|4 |0.332 |0y2Ga0Au2NZaRuIGEAiwTQ | 89 |
 
 * If you go back to the univariate distributions the only thing which I can see improve is 'danceability'. Other factors don't seem to matter as much. That makes sense too , who cares what key or time signature you are in. 
 
