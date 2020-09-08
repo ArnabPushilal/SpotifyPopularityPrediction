@@ -57,7 +57,8 @@ I intially queried the song's by year  & maximum items returned per call was 50,
 |12 - time signature (int)|  An estimated overall time signature of a track.| Categorical |
 |13 - valence (float) |  A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).| Numerical| 
 
-Apart from this I added another data point 'Numer of Markets' the song was released in. Country wise list was available from the 'search' end point
+*Apart from this I added another data point *'Numer of Markets'* the song was released in. Country wise list was available from the 'search' end point. So i just calculated the no of elements in the list to get the new feature
+
 As a musician some of the data points already made sense to me. For instance the 'key' , 'mode' ,'time signature' , ' tempo' are familiar terms. Now some of the abstract and insteresting terms are 'valence' , 'instrumentalness' , 'energy' ,'Danceablity' are kind of vague. It will be interesting to see if these features are contributing to overall popularity. Since we have no way of physically changing the 'valence' as we do for the 'key' of the song.
 
 # EDA
