@@ -21,10 +21,10 @@
   * [Random Forest Regressor](https://github.com/ArnabPushilal/SpotifyProject#regression)
     * [Metrics](https://github.com/ArnabPushilal/SpotifyProject#metrics)
     * [Output Distribution](https://github.com/ArnabPushilal/SpotifyProject#output-distribution-vs-actual-distribution)
-    * [Feature Importance] (https://github.com/ArnabPushilal/SpotifyProject#feature-importance-according-to-this-model)
-  * [Ridge Regression ] (https://github.com/ArnabPushilal/SpotifyProject#ridge-regression-with-polynomial-features)
+    * [Feature Importance](https://github.com/ArnabPushilal/SpotifyProject#feature-importance-according-to-this-model)
+  * [Ridge Regression ](https://github.com/ArnabPushilal/SpotifyProject#ridge-regression-with-polynomial-features)
 * [My Song](https://github.com/ArnabPushilal/SpotifyProject#my-own-song)
-* [Further Work] (https://github.com/ArnabPushilal/SpotifyProject#further-work)
+* [Further Work](https://github.com/ArnabPushilal/SpotifyProject#further-work)
   
  
 ## Motivation
