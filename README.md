@@ -162,7 +162,7 @@ First things first, I can see a direct correlation with Year of Release and Popu
 
 ![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/feature_imp_2.png)
 
-* Most important features contributing to 'Popularity - 1' seems to be loudness & danceability. 
+* Most important features contributing to 'Popularity - 1' seems to be loudness , danceability & NoOfmarkets. 
  .
 ## Random Forest Classifier
 
@@ -194,11 +194,21 @@ First things first, I can see a direct correlation with Year of Release and Popu
 
 ### Output Distribution vs Actual Distribution
 ### Train Data 
+
 ![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/Actual%20vs%20Fitted%20Values%20for%20Popularity_train_rf%20(2).png)
 * Train data seems to be following the distribution pretty well.
+
 ### Test Data
 ![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/Actual%20vs%20Fitted%20Values%20for%20Popularity%20_test_rf.png)
 * Although means seems about the same, std-dev has gone up. Extremely high / low predictions may be very error prone.
+* Training data is clearly being overfit, this is similar to the classifier!
+
+### Feature Importance according to this model
+
+![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/feature_imp.png)
+
+* It looks like the model can't distinguish between the features too well, but nevertheless 'danceability' & 'No of Market' has high importance
+* Intrestingly, the controllable musical features like 'key' ,'mode','time signature' is contributing the least! Therefore , I will probably have to dig deeper into how spotify calculates features like 'danceability', 'acousticness'
 
 ## Ridge Regression with polynomial features
 
@@ -208,10 +218,11 @@ First things first, I can see a direct correlation with Year of Release and Popu
 
 |Data |Mean Absolute Error (MAE) | Mean Squared Error (MSE)| Root Mean Squared Error (RMSE) |Mean Absolute Percentage Error| Accuracy|
 | --- | --- | --- | --- | --- | --- |
-|Train |64.66623249851526| 62.309629632070724| 7.893644888900863| 10.53| 89.47|
+|Train |6.66623249851526| 62.309629632070724| 7.893644888900863| 10.53| 89.47|
 |Test | 6.463273484157742 |64.66623249851526| 8.041531725891234| 10.75 |89.25|
 
-* Hah , just like the Classifier it seems Random Forrest just overfits on the train data so easily, while This seems generally the same with both test and train data.
+
+
 
 
 
