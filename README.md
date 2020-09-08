@@ -33,7 +33,7 @@ Just in the past year I had released 2 songs on spotify. As far as marketing wen
 ## Data Collection
 I collected the data using the spotipy library built around the spotify API
 
-I intially queried the song's by year  & maximum items returned per call was 50, but you could offset the index of the first result which helps you get more than 50( This allowed a max of 2000 per year) . To make the data base large enough I collected samples from 1980 - 2020 ( ~80000 data points).The other function I defined was to collect audio features by spotify for each track based on the track id.
+I intially queried the song's by year  & maximum items returned per call was 50, but you could offset the index of the first result which helps you get more than 50( This allowed a max of 2000 per year) . To make things interesting I collected samples from 1980 - 2020 ( ~80000 data points).The other function I defined was to collect audio features by spotify for each track based on the track id. 
 
 * https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/ ( end point for audio features )
 * https://spotipy.readthedocs.io/en/2.14.0/ ( spotipy library )
@@ -71,7 +71,7 @@ First things first, I can see a direct correlation with Year of Release and Popu
 * We can see there is a direct correlation between a song's popularity & the year of release. 
 * Initially I was about to dump all the data into one model, then I thought it would be prudent of me to *make the model decade-wise*. Since all the new test data can't really be from the past. 
 * For 2020 there is a drop in average & 605 Null values were there. This goes to suggest that there is probably a mimimum threshold of time that a song needs to be on spotify for the PopularityScore to be calculated. For this purpose I will ignore the songs of 2020.
-* It would also be interesting to see the how different are the features for the songs in each decade & how they correlate with each other
+* It would also be interesting to see the how different are the features for the songs in each decade & how they correlate with each other. 
 
 
 ## Univariate plots
@@ -82,13 +82,13 @@ First things first, I can see a direct correlation with Year of Release and Popu
 ### 1980s
 <img src="https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/Univariate_80s.png" width="1000" height="400">
 
-* Distributions of 'acousticness', 'speechiness' , 'energy ', 'instrumentalness' seems to be skewed. I will probably have to try the box-cox trasnformation for some of the variables. '
+* Distributions of 'acousticness', 'speechiness' , 'energy ', 'instrumentalness' seems to be skewed. I will probably have to try the box-cox trasnformation for some of the variables. 
 * In categorical variables 'key' of 4/4 is the most common 
 
 ## Bivariate plots
 
 * I transformed PopularityScore into 'Popular' & 'Not Popular' *by percentile for each decade*. Using qcut , I divided the data into 10 quantines and then took the 10th quantile as Popular & rest as not Popular. I tried out lesser divisions of quantiles (top 25th percentile, top 20th percentile) but that didn't work out well since I felt that the score was not high enough for the top 25th percentile to classify it as popular (it was 44 for the 80s). I didn't go beyond 10 quantiles to make sure *my classes are not too imbalanced.
-* 
+
 (Plots are Prior to log transformation)
 
 ### 1980s pairplot 
@@ -98,6 +98,13 @@ First things first, I can see a direct correlation with Year of Release and Popu
 * Loudness looks like it has a slightly different mean for 0 & 1
 * By virtue of linear separability we can the data can be seaparated by loudness & dancebility / loudness & valence.
 * We can see some variables which are linearly correlated, which I guess would be more clear with correlation heatmap
+
+### 2010s pairplot
+![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/pairplot.png)
+
+* Danceability seems to have a distribution which is different for 0s & 1s
+* Instrumentalness plot has a lot of noise
+
 
 ## Correlation Heat Map Year-wise
 
@@ -126,13 +133,16 @@ First things first, I can see a direct correlation with Year of Release and Popu
 * Similary 'loudness' & 'danceability' also have increasing correlation along the decades. I guess louder is more danceable in the present
 
 ## One-way ANOVA for Numerical variables[between groups PopQuant==0 & PopQuant ==1  post log transformation ]
-### 1990s
+
+
+### 2010s
+
 |Attribute|danceability|	energy|	loudness|	valence	|liveness|	tempo|	acousticness|	duration_ms|	instrumentalness|
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|f	|5.301233e+01	|8.507439e+01	|2.053819e+02	|13.541535|	14.840970|	2.452146|	8.469009e+01|	1.019611|	1.105531e+02|
-|pValue|	3.437428e-13|	3.151434e-20|	2.372030e-46|	0.000234	|0.000117|	0.117380|	3.824398e-20|	0.312624|	8.656026e-26|
+|f|	2.834747e+02	|21.794906|	4.106700e+01	|4.115331|	2.621190e+01	|3.026575|	0.003671|	6.730923e+01	|8.145750e+01|
+|pValue|	3.578425e-63|	0.000003	|1.503817e-10|	0.042509|	3.087683e-07	|0.081926|	0.951685|	2.459964e-16|	1.949095e-19|
 
-* So usually a low p value would help us reject our null hypothesis. But I'm suprised that it's so low for danceability,energy,loudness, acousticness,instrumentalness even when the distributions in the pairplot looked very identical. 
+*  Danceability in the as clear in the pairplot has a different mean for each distribution , but so does loudness , liveliness & valence. This could be due to the fact that my distributions aren't exactly normal even afer the transformation.
 
 * Perhaphs the a non parametric test like Kruskals would have been a better choice.
 
