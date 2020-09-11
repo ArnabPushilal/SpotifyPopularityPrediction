@@ -143,7 +143,8 @@ First things first, I can see a direct correlation with Year of Release and Popu
 |f|	2.834747e+02	|21.794906|	4.106700e+01	|4.115331|	2.621190e+01	|3.026575|	0.003671|	6.730923e+01	|8.145750e+01|
 |pValue|	3.578425e-63|	0.000003	|1.503817e-10|	0.042509|	3.087683e-07	|0.081926|	0.951685|	2.459964e-16|	1.949095e-19|
 
-*  Danceability in the as clear in the pairplot has a different mean for each distribution , but so does loudness , liveliness & valence. This could be due to the fact that my distributions aren't exactly normal even afer the transformation.
+
+*  Danceability in the as clear in the pairplot has a different mean for each distribution , but so does loudness , liveliness & valence(p value & f value leading to reject in null hypothesis) . This could be due to the fact that my distributions aren't exactly normal even afer the transformation. 
 
 * Perhaphs the a non parametric test like Kruskals would have been a better choice.
 
@@ -204,7 +205,7 @@ First things first, I can see a direct correlation with Year of Release and Popu
 |Train |2.3380337756197442| 8.5386173504373 |2.922091263194444| 3.9 | 96.1|
 |Test | 6.422792491484789 |63.37485329803256| 7.960832450066548| 10.64 |89.36|
 
-* MAPE is about 10.6% & Absolute Error is 6.4422 for test data. So for a scale of 0-100 , Not bad?
+* MAPE is about 10.6% & Absolute Error is 6.4422 for test data. But alas MSE is very high , which means plenty of outliers probably. 
 
 ### Output Distribution vs Actual Distribution
 ### Train Data 
@@ -214,7 +215,7 @@ First things first, I can see a direct correlation with Year of Release and Popu
 
 ### Test Data
 ![](https://github.com/ArnabPushilal/SpotifyProject/blob/master/images/Actual%20vs%20Fitted%20Values%20for%20Popularity%20_test_rf.png)
-* Although means seems about the same, std-dev has gone up. Extremely high / low predictions may be very error prone.
+* Although means seems about the same, std-dev has gone up. Extremely high / low predictions may be very error prone. ( High MSE )
 * Training data is clearly being overfit, this is similar to the classifier!
 
 ### Feature Importance according to this model
